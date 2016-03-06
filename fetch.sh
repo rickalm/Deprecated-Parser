@@ -1,7 +1,7 @@
-mkdir files text
-mv text/* files/.
+oldpwd=$PWD
+mkdir -p files files/text files/other
 
-cd files
+cd files/other
 
 wget 'http://textfiles.com/computers/' -O - | tr ' >' '\n\n' | grep -i href | cut -d\" -f2 | while read file; do 
 	/bin/false && wget "http://textfiles.com/computers/$file"
@@ -21,4 +21,4 @@ cat * | tr '\t' ' ' | \
     head -25
 
 mv *.txt ../text
-cd ..
+cd $oldpwd
