@@ -29,6 +29,12 @@ run docker containers either directly or through a virtual linux machine
 
 *If your on a Mac or PC, once you setup docker-machine execute a ```docker-machine ssh default`` to get a shell prompt on the VM before you clone the git repo*
 
-Executing the example is as easy as running ```
+Executing the example is as easy as running
+```
 ./run.sh ruby main files
 ```
+
+## Alternate solution
+
+via_shell.sh is a one-line bash shell script that will accomplish the same results without the need of a lanuguage using standard unix tools
+
